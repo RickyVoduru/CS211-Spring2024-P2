@@ -15,8 +15,9 @@ public class Host extends Dolores implements Freezable {
          * This field holds a reference to the NarrativeLoop instance associated with
          * this Host.
          */
+        super();
         this.narrativeLoop = narrativeLoop;
-        super.addNarrativeLoop(this.narrativeLoop);
+        addNarrativeLoop(this.narrativeLoop);
     }
 
     public boolean freezeAllMotorFunctions() {
@@ -47,8 +48,7 @@ public class Host extends Dolores implements Freezable {
              * This snapshot is constructed using the emulation, simulacra, and simulation
              * lists from the narrativeLoop field.
              */
-            MemorySnapshot memorySnapshot = new MemorySnapshot(narrativeLoop.emulation, narrativeLoop.simulacra,
-                    narrativeLoop.simulation);
+            MemorySnapshot memorySnapshot = new MemorySnapshot(narrativeLoop.emulation, narrativeLoop.simulacra, narrativeLoop.simulation);
             return memorySnapshot;
         }
 

@@ -69,6 +69,8 @@ public class Dolores extends Robot implements Wipeable {
          * simulation lists within the
          * narrative loop. However, the lists in the parameters are defense copies.
          */
+        MemorySnapshot memorySnapshot = new MemorySnapshot(narrative.emulation, narrative.simulacra, narrative.simulation);
+        return memorySnapshot;
 
     }
 
