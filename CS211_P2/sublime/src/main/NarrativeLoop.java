@@ -36,7 +36,7 @@ abstract class NarrativeLoop {
                  * SystemWhole reference, add the SystemWhole
                  * to emulation.
                  */
-                if (realm == Realm.EMULATION && !(containsKind(emulation, mach.getKind()))) {
+                if (realm == Realm.EMULATION && !(containsKind(emulation, mach.getKind()) || emulation.contains(sys))) {
                     emulation.add(sys);
                 }
             }
@@ -51,11 +51,11 @@ abstract class NarrativeLoop {
             for (Machine machine : system.reify()) {
                 Realm realm = determineRealm(machine.getKind(), emulationContext, simulacraContext);
                 // For Realm.SIMULACRA, add SystemWholes to simulacra.
-                if (realm == Realm.SIMULACRA && !(containsKind(emulation, machine.getKind()))) {
+                if (realm == Realm.SIMULACRA && !(containsKind(simulacra, machine.getKind()) || simulacra.contains(system))) {
                     simulacra.add(system);
                 }
                 // For Realm.SIMULATION, add SystemWholes to simulation.
-                if (realm == Realm.SIMULATION && !(containsKind(emulation, machine.getKind()))) {
+                if (realm == Realm.SIMULATION && !(containsKind(simulation, machine.getKind()) || simulation.contains(system))) {
                     simulation.add(system);
                 }
             }
