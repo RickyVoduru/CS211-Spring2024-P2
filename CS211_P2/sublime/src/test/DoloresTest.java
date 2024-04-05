@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.concurrent.TimeUnit;
 
 //hints:
-// import src.main.Dolores;
-// import src.main.Freezable;
+//import src.main.Dolores;
+//import src.main.Freezable;
 
 //For this project, it is OK to place all tests in this class. Prefer creating a test class per project class.
 public class DoloresTest {

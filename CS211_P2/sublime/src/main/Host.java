@@ -7,7 +7,7 @@
 */
 package src.main;
 
-public class Host extends Dolores implements Freezable {
+public class Host extends Dolores implements Freezable, Wipeable {
     /*
      * narrativeLoop: this field is a private instance of the NarrativeLoop type.
      * It's initialized in the constructor.

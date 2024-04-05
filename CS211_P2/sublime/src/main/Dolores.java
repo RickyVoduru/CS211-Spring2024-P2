@@ -17,7 +17,7 @@ public class Dolores extends Robot implements Wipeable {
      */
     private ArrayList<NarrativeLoop> narrativeLoops = new ArrayList<NarrativeLoop>();
 
-    public Dolores(String[] emergences, int serialNumber, boolean flies, boolean autonomous, boolean teleoperated) {
+    public Dolores() {
         /*
          * Initializes Dolores, which is public method, with characteristics such as
          * emergences, serial number, and capabilities (flies, autonomous,
